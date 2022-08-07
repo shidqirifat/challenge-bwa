@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Challenge BWA</title>
+  <link rel="icon" href="https://buildwithangga.com/themes/front/images/logo_bwa_new.svg">
   <link rel="stylesheet" href="/styles/bootstrap.min.css" />
   <link rel="stylesheet" href="/styles/template.css" />
   <link rel="stylesheet" href="/styles/header.css" />
@@ -15,9 +16,9 @@
 
 <body>
   <!-- START HEADER -->
-  <header class="fixed-top p-2">
-    <div class="container d-flex align-items-center justify-content-between">
-      <nav class="navbar navbar-expand-lg">
+  <header class="fixed-top p-2 shadow-sm">
+    <div class="container position-relative d-flex align-items-center justify-content-between header-wrapper">
+      <nav class="navbar navbar-expand">
         <ul class="navbar-nav me-auto d-flex gap-4">
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -43,7 +44,7 @@
         </ul>
       </nav>
 
-      <div class="position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-2">
+      <div class="position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-2 logo-wrapper">
         <img src="/assets/icons/home.svg" alt="Logo Resto" width="34" height="34" />
         <h1 class="text-logo">Resto</h1>
       </div>
@@ -51,15 +52,49 @@
       <div class="right-header-wrapper d-flex gap-4">
         <div class="search-wrapper d-flex align-items-center gap-2">
           <img src="/assets/icons/search.svg" alt="Search" width="20" height="20">
-          <input type="text" name="keyword" id="keyword" placeholder="Search your favorite food">
+          <input type="text" name="keyword" id="keyword" placeholder="Search your favorite food" class="search-input">
         </div>
         <button class="login-text fw-semibold text-purple-primary bg-purple-secondary">Login</button>
+        <button id="navbar-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
     </div>
+
+    <nav id="navbar" class="navbar-expand">
+      <ul class="navbar-nav navbar-mobile me-auto d-flex gap-4">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <h3 class="text-black-primary text-nav">Home</h3>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link d-flex gap-2 align-items-center">
+            <h3 class="text-black-primary text-nav">Category</h3>
+            <img src="/assets/icons/arrow-down.svg" alt="Arrow Down" height="5" width="9" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <h3 class="text-black-primary text-nav">Services</h3>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <h3 class="text-black-primary text-nav">About Us</h3>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!-- END HEADER -->
 
   <main>
+    <!-- SHADOW OVERLAY -->
+    <div id="shadow" class="shadow"></div>
+
     <!-- START HERO -->
     <section class="hero-wrapper d-flex">
       <div class="position-relative hero-restaurant-wrapper">
@@ -106,14 +141,16 @@
         <h3 class="fw-semibold text-purple-primary title-section">Special Benefit For You</h3>
         <h2 class="fw-semibold text-black-primary sub-title-section">Why Should Choose Us?</h2>
       </div>
-      <div class="row">
-        <div class="col text-center card-benefit d-flex flex-column align-items-center">
-          <div class="icon-wrapper bg-brown-secondary">
-            <img src="/assets/icons/extra-discount.svg" alt="Extra Discount" width="48" height="48"
-              class="image-card-benefit">
+      <div class="row card-benefit-wrapper">
+        <div class="col text-center card-benefit d-flex flex-column justify-content-between align-items-center">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="icon-wrapper bg-brown-secondary">
+              <img src="/assets/icons/extra-discount.svg" alt="Extra Discount" width="48" height="48"
+                class="image-card-benefit">
+            </div>
+            <h3 class="title-card-benefit fw-semibold text-black-primary">Extra Discounts</h3>
+            <h4 class="desc-card-benefit text-black-secondary">Get your special discount by using our reservation</h4>
           </div>
-          <h3 class="title-card-benefit fw-semibold text-black-primary">Extra Discounts</h3>
-          <h4 class="desc-card-benefit text-black-secondary">Get your special discount by using our reservation</h4>
           <a href="#" class="btn-benefit-wrapper">
             <button
               class="btn-details-card-benefit d-flex justify-content-center gap-2 align-items-center bg-brown-primary">
@@ -123,13 +160,15 @@
           </a>
         </div>
 
-        <div class="col text-center card-benefit d-flex flex-column align-items-center">
-          <div class="icon-wrapper bg-brown-secondary">
-            <img src="/assets/icons/come-and-eat.svg" alt="Come and Eat" width="48" height="48"
-              class="image-card-benefit">
+        <div class="col text-center card-benefit d-flex flex-column justify-content-between">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="icon-wrapper bg-brown-secondary">
+              <img src="/assets/icons/come-and-eat.svg" alt="Come and Eat" width="48" height="48"
+                class="image-card-benefit">
+            </div>
+            <h3 class="title-card-benefit fw-semibold text-black-primary">Come and Eats</h3>
+            <h4 class="desc-card-benefit text-black-secondary">Get your own table quickly & without waiting in line</h4>
           </div>
-          <h3 class="title-card-benefit fw-semibold text-black-primary">Come and Eats</h3>
-          <h4 class="desc-card-benefit text-black-secondary">Get your own table quickly & without waiting in line</h4>
           <a href="#" class="btn-benefit-wrapper">
             <button class="btn-details-card-benefit d-flex justify-content-center gap-2 align-items-center">
               <h4 class="text-button fw-semibold">View Details</h4>
@@ -138,15 +177,17 @@
           </a>
         </div>
 
-        <div class="col text-center card-benefit d-flex flex-column align-items-center">
-          <div class="icon-wrapper bg-brown-secondary">
-            <img src="/assets/icons/no-extra-fee.svg" alt="No Extra Fee" width="48" height="48"
-              class="image-card-benefit">
+        <div class="col text-center card-benefit d-flex flex-column justify-content-between">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="icon-wrapper bg-brown-secondary">
+              <img src="/assets/icons/no-extra-fee.svg" alt="No Extra Fee" width="48" height="48"
+                class="image-card-benefit">
+            </div>
+            <h3 class="title-card-benefit fw-semibold text-black-primary">No Extra Fee</h3>
+            <h4 class="desc-card-benefit text-black-secondary">Get tax free if you want to order food and make a
+              reservation
+            </h4>
           </div>
-          <h3 class="title-card-benefit fw-semibold text-black-primary">No Extra Fee</h3>
-          <h4 class="desc-card-benefit text-black-secondary">Get tax free if you want to order food and make a
-            reservation
-          </h4>
           <a href="#" class="btn-benefit-wrapper">
             <button class="btn-details-card-benefit d-flex justify-content-center gap-2 align-items-center">
               <h4 class="text-button fw-semibold">View Details</h4>
@@ -155,14 +196,17 @@
           </a>
         </div>
 
-        <div class="col text-center card-benefit d-flex flex-column align-items-center">
-          <div class="icon-wrapper bg-brown-secondary">
-            <img src="/assets/icons/guaranteed-cleanliness.svg" alt="Guaranteed Cleanliness" width="48" height="48"
-              class="image-card-benefit">
+        <div class="col text-center card-benefit d-flex flex-column justify-content-between">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="icon-wrapper bg-brown-secondary">
+              <img src="/assets/icons/guaranteed-cleanliness.svg" alt="Guaranteed Cleanliness" width="48" height="48"
+                class="image-card-benefit">
+            </div>
+            <h3 class="title-card-benefit fw-semibold text-black-primary">Guaranteed Cleanliness</h3>
+            <h4 class="desc-card-benefit text-black-secondary">We ensure the cleanliness of the place as well as the
+              food
+            </h4>
           </div>
-          <h3 class="title-card-benefit fw-semibold text-black-primary">Guaranteed Cleanliness</h3>
-          <h4 class="desc-card-benefit text-black-secondary">We ensure the cleanliness of the place as well as the food
-          </h4>
           <a href="#" class="btn-benefit-wrapper">
             <button class="btn-details-card-benefit d-flex justify-content-center gap-2 align-items-center">
               <h4 class="text-button fw-semibold">View Details</h4>
@@ -192,45 +236,47 @@
         </a>
       </div>
 
-      <div class="d-flex gap-4">
-        <div class="card-popular-restaurant position-relative">
-          <img src="/assets/images/popular-restaurant-1.png" alt="Popular Restaurant 1"
-            class="popular-restaurant-image active">
-          <div
-            class="card-info-popular-restaurant position-absolute d-flex gap-4 align-items-center justify-content-between">
-            <div class="d-flex flex-column gap-1">
-              <div class="rating-wrapper">
-                <div class="stars-wrapper">
-                  <img src="/assets/icons/star.svg" width="20" height="20" alt="Star" class="star">
+      <div class="wrapper">
+        <div class="d-flex gap-4 card-popular-restaurant-wrapper">
+          <div class="card-popular-restaurant position-relative">
+            <img src="/assets/images/popular-restaurant-1.png" alt="Popular Restaurant 1"
+              class="popular-restaurant-image active">
+            <div
+              class="card-info-popular-restaurant position-absolute d-flex gap-4 align-items-center justify-content-between">
+              <div class="d-flex flex-column gap-1">
+                <div class="rating-wrapper">
+                  <div class="stars-wrapper">
+                    <img src="/assets/icons/star.svg" width="20" height="20" alt="Star" class="star">
+                  </div>
+                  <span class="rate text-yellow-primary">5.0</span>
+                  <span class="review text-black-secondary">(7.6K+)</span>
                 </div>
-                <span class="rate text-yellow-primary">5.0</span>
-                <span class="review text-black-secondary">(7.6K+)</span>
+                <h3 class="popular-restaurant fw-semibold">Bind Balorant</h3>
+                <div class="location-wrapper">
+                  <img src="/assets/icons/location.svg" alt="Location" width="18" height="20">
+                  <h5 class="location-popular-restaurant text-black-secondary">Jakarta, Indonesia</h5>
+                </div>
               </div>
-              <h3 class="popular-restaurant fw-semibold">Bind Balorant</h3>
-              <div class="location-wrapper">
-                <img src="/assets/icons/location.svg" alt="Location" width="18" height="20">
-                <h5 class="location-popular-restaurant text-black-secondary">Jakarta, Indonesia</h5>
+              <div class="btn-arrow-card-info-wrapper">
+                <a href="#">
+                  <button class="col bg-brown-primary arrow-card-info">
+                    <img src="/assets/icons/arrow-right-long.svg" alt="Arrow Right" width="10" height="12">
+                  </button>
+                </a>
               </div>
-            </div>
-            <div class="btn-arrow-card-info-wrapper">
-              <a href="#">
-                <button class="col bg-brown-primary arrow-card-info">
-                  <img src="/assets/icons/arrow-right-long.svg" alt="Arrow Right" width="10" height="12">
-                </button>
-              </a>
             </div>
           </div>
-        </div>
 
-        <div class="card-popular-restaurant position-relative">
-          <img src="/assets/images/popular-restaurant-2.png" alt="Popular Restaurant 2"
-            class="popular-restaurant-image">
-        </div>
-        <div class="card-popular-restaurant position-relative">
-          <img src="/assets/images/popular-restaurant-3.png" alt="Popular Restaurant 3"
-            class="popular-restaurant-image">
-        </div>
+          <div class="card-popular-restaurant position-relative">
+            <img src="/assets/images/popular-restaurant-2.png" alt="Popular Restaurant 2"
+              class="popular-restaurant-image">
+          </div>
+          <div class="card-popular-restaurant position-relative">
+            <img src="/assets/images/popular-restaurant-3.png" alt="Popular Restaurant 3"
+              class="popular-restaurant-image">
+          </div>
 
+        </div>
       </div>
     </section>
     <!-- END POPULAR RESTAURANT -->
@@ -251,9 +297,9 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row card-restaurant-near-wrapper">
         <div class="card-restaurant-near col grid position-relative">
-          <img src="/assets/images/near-restaurant-1.png" alt="Near Restaurant 1">
+          <img src="/assets/images/near-restaurant-1.png" alt="Near Restaurant 1" class="restaurant-near-image">
           <div
             class="card-info-restaurant-near position-absolute d-flex gap-4 align-items-center justify-content-between">
             <div class="d-flex flex-column gap-1">
@@ -278,7 +324,7 @@
         </div>
 
         <div class="card-restaurant-near col grid position-relative">
-          <img src="/assets/images/near-restaurant-2.png" alt="Near Restaurant 2">
+          <img src="/assets/images/near-restaurant-2.png" alt="Near Restaurant 2" class="restaurant-near-image">
           <div
             class="card-info-restaurant-near position-absolute d-flex gap-4 align-items-center justify-content-between">
             <div class="d-flex flex-column gap-1">
@@ -303,7 +349,7 @@
         </div>
 
         <div class="card-restaurant-near col grid position-relative">
-          <img src="/assets/images/near-restaurant-3.png" alt="Near Restaurant 3">
+          <img src="/assets/images/near-restaurant-3.png" alt="Near Restaurant 3" class="restaurant-near-image">
           <div
             class="card-info-restaurant-near position-absolute d-flex gap-4 align-items-center justify-content-between">
             <div class="d-flex flex-column gap-1">
@@ -366,7 +412,7 @@
       </div>
       <div class="col d-flex flex-column justify-content-between">
         <div>
-          <div class="d-flex flex-column gap-1">
+          <div class="d-flex flex-column gap-1 header-chef-wrapper">
             <h3 class="title-section text-purple-primary">Top 4 Expert Chefs</h3>
             <h2 class="sub-title-section text-black-primary">Expert Chefs in Fuddy</h2>
           </div>
@@ -434,7 +480,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="view-all-chef-wrapper">
           <a href="#">
             <button
               class="btn-popular-restaurant d-flex justify-content-center gap-2 align-items-center bg-brown-primary">
@@ -448,7 +494,7 @@
     <!-- END EXPERT CHEF -->
   </main>
 
-  <script src="/script/bootstrap.bundle.min.js"></script>
+  <script src="/script/index.js"></script>
 </body>
 
 </html>

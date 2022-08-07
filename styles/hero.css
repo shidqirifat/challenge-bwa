@@ -31,6 +31,9 @@
   position: relative;
   left: 80px;
   max-width: 80vw;
+  height: 512px;
+  object-fit: cover;
+  border-radius: 24px;
 }
 
 .card-content-hero {
@@ -112,4 +115,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-wrapper {
+    margin: 0;
+  }
 }
