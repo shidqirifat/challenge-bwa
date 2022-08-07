@@ -1,0 +1,265 @@
+/* START BENEFIT SECTION */
+.benefit-wrapper {
+  padding: 120px 0;
+  width: inherit;
+}
+
+.header-benefit-wrapper {
+  padding-bottom: 40px;
+}
+
+.title-section {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sub-title-section {
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.card-benefit {
+  border-radius: 24px;
+  background-color: #fff;
+}
+
+.benefit-wrapper .icon-wrapper {
+  margin-top: 24px;
+}
+
+.btn-benefit-wrapper {
+  width: 100%;
+}
+
+.title-card-benefit {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 24px 0 12px;
+}
+
+.desc-card-benefit {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 54px;
+  padding: 0 24px;
+}
+
+.btn-details-card-benefit {
+  border-radius: 12px 12px 24px 24px;
+  padding: 24px 0;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.btn-details-card-benefit:not(.bg-brown-primary):hover {
+  background-color: var(--brown-secondary-hover);
+}
+
+.btn-details-card-benefit:active {
+  background-color: var(--brown-primary);
+}
+
+/* END BENEFIT SECTION */
+
+/* START POPULAR SECTION */
+.header-popular-restaurant-wrapper {
+  width: 25%;
+}
+
+.desc-popular-restaurant {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 20px 40px 56px 0;
+}
+
+.btn-popular-restaurant {
+  border-radius: 12px;
+  padding: 16px 28px;
+  width: max-content;
+}
+
+.card-popular-restaurant,
+.card-restaurant-near {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.popular-restaurant-image {
+  object-fit: cover;
+  width: 215px;
+  height: 475px;
+}
+
+.popular-restaurant-image.active {
+  width: auto;
+}
+
+.card-info-popular-restaurant,
+.card-info-restaurant-near {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  bottom: 24px;
+  right: 24px;
+  left: 24px;
+}
+
+.card-info-popular-restaurant .rate,
+.card-info-restaurant-near .rate {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.popular-restaurant,
+.restaurant-near {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.location-popular-restaurant {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* END POPULAR SECTION */
+
+/* START RESTAURANT NEAR SECTION */
+.restaurant-near-wrapper {
+  padding: 120px 0;
+}
+
+.header-restaurant-near-wrapper {
+  padding-bottom: 34px;
+}
+
+.location-restaurant-near-wrapper {
+  padding: 22px 28px;
+  border-radius: 12px;
+  background: #F2F2F2;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.location-restaurant-near-wrapper:hover {
+  background: #e3e3e3;
+}
+
+.price-restaurant-near {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.card-info-restaurant-near {
+  right: 34px;
+  left: 34px;
+  bottom: 30px;
+}
+
+.view-all-restaurant-near {
+  margin-top: 56px;
+}
+
+/* END RESTAURANT NEAR SECTION */
+
+/* START CHEF EXPERT */
+.chef-image {
+  margin: 0 38px 0 58px;
+}
+
+.card-experience,
+.card-chef-restaurant {
+  box-shadow: 8px 8px 25px rgba(102, 102, 102, 0.04);
+  border-radius: 24px;
+  background-color: #fff;
+}
+
+.card-experience {
+  right: 0;
+  top: 40px;
+  height: 180px;
+  width: 200px;
+}
+
+.years-experience {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.experience {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.expert-chef-wrapper {
+  padding-bottom: 120px;
+}
+
+.card-chef-restaurant {
+  padding: 24px;
+  left: 0;
+  bottom: 40px;
+  width: 320px;
+}
+
+.restaurant-expert-wrapper {
+  margin-top: 32px;
+}
+
+.card-experience .icon-wrapper {
+  margin-bottom: 12px;
+}
+
+.text-chef-restaurant {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.chef-name {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 24px;
+}
+
+.text-detail {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.chef-restaurant-image {
+  border-radius: 16px;
+}
+
+.card-restaurant-expert {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-restaurant-expert:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.menu-restaurant {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.restaurant-expert {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.card-restaurant-expert:not(:first-child) .card-detail {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.card-restaurant-expert:hover .card-detail {
+  opacity: 1;
+}
+
+/* END CHEF EXPERT */

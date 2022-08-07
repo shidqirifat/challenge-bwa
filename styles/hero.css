@@ -1,0 +1,115 @@
+.hero-wrapper {
+  padding-top: 134px;
+  padding-left: calc(50vw - (1320px / 2));
+  padding-right: 8em;
+  gap: 40px;
+  overflow-x: auto;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.hero-wrapper:hover::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+.hero-restaurant-wrapper {
+  width: max-content;
+}
+
+.hero-image-restaurant {
+  position: relative;
+  left: 80px;
+  max-width: 80vw;
+}
+
+.card-content-hero {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rating-wrapper,
+.stars-wrapper,
+.location-wrapper,
+.info-card-hero,
+.btn-reserve,
+.info-card-hero {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-wrapper {
+  gap: 4px;
+}
+
+.rate {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.review {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-restaurant {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.price-hero-restaurant {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.location-wrapper {
+  gap: 6px;
+}
+
+.location-hero {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn-reserve {
+  padding: 16px 28px;
+  border-radius: 12px;
+  gap: 10px;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.reserve {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.info-card-hero {
+  gap: 6px;
+}
+
+.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -1,0 +1,36 @@
+header {
+  background-color: #fff;
+}
+
+.text-logo {
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 800;
+}
+
+.nav-link {
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--purple-primary);
+}
+
+.text-nav {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.login-text {
+  padding: 16px 28px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.search-wrapper {
+  padding: 16px 28px;
+  background-color: #fff;
+}
